@@ -5,7 +5,7 @@ import re
 
 class NatsCConan(ConanFile):
     name = "nats.c"
-    version = "2.1.0"
+    version = "3.4.0"
     description = "A C client for the NATS messaging system"
     topics = ("conan", "nats.c", "communication", "messaging", "protocols")
     url = "https://github.com/systrading/conan-nats"
@@ -34,7 +34,7 @@ class NatsCConan(ConanFile):
     _source_subfolder = "source_subfolder"
 
     def source(self):
-        sha256 = "1493ae3d790e2ebc4d77c65ef2957e2fb77182d69afeeeb2be1e1e6bee0ca12e"
+        sha256 = "a41b4090ed943fcb6e84819d8dc8eae83fc52fb7f12b35a1c4454563ec56054d"
         tools.get("{0}/archive/v{1}.tar.gz".format(self.homepage, self.version), sha256=sha256)
         extracted_dir = "-".join([self.name, self.version])
         os.rename(extracted_dir, self._source_subfolder)
