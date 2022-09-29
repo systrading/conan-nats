@@ -26,9 +26,9 @@ class NatsCConan(ConanFile):
     default_options = {
         "shared": False,
         "no_spin": False,
-        "tls": True,
-        "tls_force_host_verify": True,
-        "tls_use_openssl_1_1_api": True,
+        "tls": False,
+        "tls_force_host_verify": False,
+        "tls_use_openssl_1_1_api": False,
         "streaming": False
     }
     _source_subfolder = "source_subfolder"
