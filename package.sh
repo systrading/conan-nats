@@ -1,4 +1,4 @@
 #!/bin/bash
 
 conan create . 
-conan upload -c "*" --remote staconan --force
+conan upload -c "*" --all --remote staconan --force
