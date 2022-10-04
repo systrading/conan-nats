@@ -13,7 +13,6 @@ class NatsCConan(ConanFile):
     license = "https://github.com/nats-io/nats.c/blob/master/LICENSE"
     exports_sources = ["CMakeLists.txt"]
     generators = "cmake", "cmake_find_package"
-    build_policy = "missing"
     settings = "os", "compiler", "build_type", "arch"
     options = {
         "shared": [True, False],
