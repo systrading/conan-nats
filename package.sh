@@ -1,4 +1,4 @@
 #!/bin/bash
 
-conan create . && \
-  conan upload -c "*" --all --remote staconan --force
+conan create . --build=missing && \
+  conan upload -c "*" --check --all --remote staconan
