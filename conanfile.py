@@ -46,6 +46,7 @@ class NatsCConan(ConanFile):
         cmake.definitions["NATS_BUILD_TLS_FORCE_HOST_VERIFY"] = self.options.tls_force_host_verify
         cmake.definitions["NATS_BUILD_TLS_USE_OPENSSL_1_1_API"] = self.options.tls_use_openssl_1_1_api
         cmake.definitions["NATS_BUILD_LIB_STATIC"] = not self.options.shared
+        cmake.definitions["NATS_BUILD_STATIC_EXAMPLES"] = not self.options.shared
         cmake.definitions["NATS_BUILD_LIB_SHARED"] = self.options.shared
         cmake.configure()
         return cmake
